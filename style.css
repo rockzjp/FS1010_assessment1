@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #d5d5d5;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+span{
+    font-weight: bolder;
+}
+
+h1 span{
+    font-weight: lighter;
+}
+
+h1{
+    font-size: 50px;
+}
+p{
+    color: grey;
+    font-size: 35px;
+}
+
+
+.wrapper{
+    max-width: 1100px;
+    height: auto;
+    margin: auto;
+}
+
+
+.header{
+    
+    width: 100%;
+    height: 20%;
+}
+
+
+.header> .header-text{
+    width: 50%;
+}
+
+
+/*grid*/
+.grid{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(220px, auto);
+}
+
+.grid-item
+{
+    position: relative;
+}
+
+.grid-item > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;;
+    left:0px;
+    right: 0px;
+}
+
+.grid-item > .overlay{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;;
+    left:0px;
+    right: 0px;
+    padding-left: 20px;
+    padding-top: 20px; 
+    background-image: linear-gradient(to bottom right,rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 49.9%, rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100% ) ;
+}
+
+.grid-item:hover > .overlay {
+    display: block;
+}
+
+
+.grid-item_two{
+    grid-column: 2 / 3;
+    grid-row: 1/ 3;
+}
+
+.grid-item_four{
+    grid-column: 1 /2;
+    grid-row: 2 /4;
+}
+
+
+.grid-item_six{
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+
+span h1{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+span p{
+    font-size: 14px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+.overlay span{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+}
+
+
+
+
+
+
+/*footer*/
+
+footer{
+    position: relative;
+    margin-top: 20px;
+    left: -20px;
+    
+}
+
+footer i{
+    
+   
+  font-size: 30px;
+  width: 30px; 
+  height: 30px;
+
+}
+
+li{
+    list-style:none;
+    padding: 30px;
+    
+    
+    
+   
+   
+}
+ul{
+    display: flex;
+    position: absolute;
+    left: -50px;
+
+}
+
+ul li a{
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    transition: 1s;
+}
+
+
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transform: 0.5s;
+
+}
+
+
+
+
+ul li a:hover:before{
+    transform: scale(1.5);
+    background: rgb(165, 165, 165);
+    
+}
+
+
+
+
+
+
